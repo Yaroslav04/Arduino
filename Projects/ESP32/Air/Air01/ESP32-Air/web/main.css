@@ -1,0 +1,106 @@
+html {
+    background: #01556a;
+}
+
+#app {
+    position: relative;
+    background: #01556a;
+}
+
+.block {
+    background: #0195ae;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    border: 25px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.block_horisontal {
+    float: left;
+    /*Задаем обтекание*/
+    line-height: 120px;
+    /*Высота строки +  верт. центрирования текста*/
+    font-size: 40px;
+    background: rgb(70, 138, 207);
+    color: #dae5ea;
+    margin-top: 60px;
+    width: 320px;
+    /*Фиксируем ширину блока*/
+    margin-right: 10px;
+    text-align: center;
+    /*Центрируем текст по горизонтали*/
+}
+
+.content {
+    position: relative;
+    top: 0;
+    right: 1%;
+    left: 1%;
+}
+
+/*TEXT*/
+
+.text {
+    color: #dae5ea;
+}
+
+/*BUTTONS*/
+
+.button_title {
+    color: #dae5ea;
+    margin-top: 1%;
+    margin-left: 1%;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block
+}
+
+.relay_on {
+    margin-top: 1%;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    display: inline-block;
+    width: 300px;
+    height: 130px;
+    background-image: url('sprite.png');
+    background-position: 0px 0px;
+}
+
+.relay_off {
+    margin-top: 1%;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    display: inline-block;
+    width: 300px;
+    height: 130px;
+    background-image: url('sprite.png');
+    background-position: -300px 0px;
+}
+
+/*SENSORS*/
+
+.sensor {
+    color: #dae5ea;
+    margin-top: 1%;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block
+}
+
+.tap {
+    margin-top: 1%;
+    width: 300px;
+    height: 100px;
+}
+
+.graph {
+    border: 1px solid black;
+}
