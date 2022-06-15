@@ -1,6 +1,6 @@
 void WiFiInit()
 {
-  byte tries = 11;
+  byte tries = 20;
   WiFi.begin(ssid, password);
   while (--tries && WiFi.status() != WL_CONNECTED)
   {
