@@ -12,6 +12,9 @@
 #include <time.h>
 #include "SD.h"
 #include "SPI.h"
+#include <ESPmDNS.h>
+#include <WiFiUdp.h>
+#include <ArduinoOTA.h>
 
 // WiFi Config
 const char *ssid = "Hata2";            // Enter SSID here
@@ -108,6 +111,7 @@ void setup()
   Serial.println("mhz");
   WiFiInit();
   Serial.println("wifi");
+  ArduinoOTA.begin();
   tExist = TimeSynch();
   Serial.println("time");
   SPIFFS.begin();
@@ -120,11 +124,11 @@ void setup()
   Serial.println("server");
   delay(5000);
   Serial.println("start");
-  Serial.println(GetValuesWithDateJson(GetDateTime()));
 }
 
 void loop()
 {
+  ArduinoOTA.handle();
   server.handleClient();
   ftpSrv.handleFTP();
   ReadSHT20Sensor();
