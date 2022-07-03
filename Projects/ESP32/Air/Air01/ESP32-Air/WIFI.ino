@@ -5,6 +5,7 @@ void WiFiInit()
   while (--tries && WiFi.status() != WL_CONNECTED)
   {
     delay(500);
+    Serial.print(".");
   }
 
   if (WiFi.status() != WL_CONNECTED)
@@ -12,12 +13,14 @@ void WiFiInit()
     WiFi.disconnect();
     WiFi.softAP(ssidAP, passwordAP);
     WiFi.softAPConfig(local_ip, gateway, subnet);
+    Serial.println("AP mode start");
+
   }
   else
   {
+    Serial.println("WIFI mode start");
     Serial.println(WiFi.localIP());
   }
-  delay(100);
 }
 
 bool TimeSynch()

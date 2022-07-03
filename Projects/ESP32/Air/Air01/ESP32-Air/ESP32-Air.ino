@@ -14,7 +14,7 @@
 #include "SPI.h"
 #include <ESPmDNS.h>
 #include <WiFiUdp.h>
-#include <ArduinoOTA.h>
+#include <ArduinoOTA.h>             
 
 // WiFi Config
 const char *ssid = "Hata2";            // Enter SSID here
@@ -100,9 +100,11 @@ unsigned int co15 = 0;
 unsigned int co10 = 0;
 unsigned int co5 = 0;
 
+
 void setup()
 {
   Serial.begin(115200);
+
   SHT20_init();
   Serial.println("sh20");
   PMS_init();
@@ -138,4 +140,5 @@ void loop()
   GetGraph();
   Save();
   WatchDog();
+ 
 }
